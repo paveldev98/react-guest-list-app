@@ -140,10 +140,10 @@ export default function App() {
             alignItems: 'center',
           }}
         >
-          <label htmlFor="firstName">First name</label>
+          <label htmlFor="First name">First name</label>
           <input
             value={firstName}
-            id="firstName"
+            id="First name"
             onChange={(e) => setFirstName(e.target.value)}
             disabled={isLoading}
             style={{
@@ -155,10 +155,10 @@ export default function App() {
               height: '23px',
             }}
           />
-          <label htmlFor="lastName">Last name</label>
+          <label htmlFor="Last name">Last name</label>
           <input
             value={lastName}
-            id="lastName"
+            id="Last name"
             onChange={(e) => setLastName(e.target.value)}
             disabled={isLoading}
             style={{
