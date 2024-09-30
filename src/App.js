@@ -114,9 +114,9 @@ export default function App() {
     }
   };
 
-  if (isLoading) {
-    return 'Loading...';
-  }
+  // if (isLoading) {
+  //   return 'Loading...';
+  // }
 
   return (
     <>
@@ -132,59 +132,63 @@ export default function App() {
         }}
       >
         <h2>Add Guest</h2>
-        <form
-          onSubmit={handleSubmit}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <label htmlFor="First name">First name</label>
-          <input
-            value={firstName}
-            id="First name"
-            onChange={(e) => setFirstName(e.target.value)}
-            // disabled={isLoading}
+        {isLoading ? (
+          'Loading...'
+        ) : (
+          <form
+            onSubmit={handleSubmit}
             style={{
-              marginBottom: '15px',
-              minWidth: '250px',
-              marginTop: '5px',
-              border: '1px solid #a1a1a1',
-              borderRadius: '5px',
-              height: '23px',
-            }}
-          />
-          <label htmlFor="Last name">Last name</label>
-          <input
-            value={lastName}
-            id="Last name"
-            onChange={(e) => setLastName(e.target.value)}
-            // disabled={isLoading}
-            style={{
-              marginBottom: '15px',
-              minWidth: '250px',
-              marginTop: '5px',
-              border: '1px solid #a1a1a1',
-              borderRadius: '5px',
-              height: '23px',
-            }}
-          />
-          <button
-            // disabled={isLoading}
-            style={{
-              padding: '10px 20px',
-              borderRadius: '8px',
-              border: 'none',
-              cursor: 'pointer',
-              background: '#BDA882',
-              color: 'white',
-              fontWeight: '600',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}
           >
-            Add Guest
-          </button>
-        </form>
+            <label htmlFor="First name">First name</label>
+            <input
+              value={firstName}
+              id="First name"
+              onChange={(e) => setFirstName(e.target.value)}
+              // disabled={isLoading}
+              style={{
+                marginBottom: '15px',
+                minWidth: '250px',
+                marginTop: '5px',
+                border: '1px solid #a1a1a1',
+                borderRadius: '5px',
+                height: '23px',
+              }}
+            />
+            <label htmlFor="Last name">Last name</label>
+            <input
+              value={lastName}
+              id="Last name"
+              onChange={(e) => setLastName(e.target.value)}
+              // disabled={isLoading}
+              style={{
+                marginBottom: '15px',
+                minWidth: '250px',
+                marginTop: '5px',
+                border: '1px solid #a1a1a1',
+                borderRadius: '5px',
+                height: '23px',
+              }}
+            />
+            <button
+              // disabled={isLoading}
+              style={{
+                padding: '10px 20px',
+                borderRadius: '8px',
+                border: 'none',
+                cursor: 'pointer',
+                background: '#BDA882',
+                color: 'white',
+                fontWeight: '600',
+              }}
+            >
+              Add Guest
+            </button>
+          </form>
+        )}
       </div>
       <div
         style={{
