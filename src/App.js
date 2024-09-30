@@ -145,7 +145,7 @@ export default function App() {
             value={firstName}
             id="First name"
             onChange={(e) => setFirstName(e.target.value)}
-            disabled={isLoading}
+            // disabled={isLoading}
             style={{
               marginBottom: '15px',
               minWidth: '250px',
@@ -160,7 +160,7 @@ export default function App() {
             value={lastName}
             id="Last name"
             onChange={(e) => setLastName(e.target.value)}
-            disabled={isLoading}
+            // disabled={isLoading}
             style={{
               marginBottom: '15px',
               minWidth: '250px',
@@ -171,7 +171,7 @@ export default function App() {
             }}
           />
           <button
-            disabled={isLoading}
+            // disabled={isLoading}
             style={{
               padding: '10px 20px',
               borderRadius: '8px',
