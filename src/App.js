@@ -61,7 +61,7 @@ export default function App() {
   };
 
   // HANDLE CHECKBOX CHANGE, PUT REQUEST
-  const handleToggle = async (id) => {
+  const handleToggle = (id) => {
     const updatedGuests = guests.map((guest) => {
       if (guest.id === id) {
         const updatedGuest = { ...guest, attending: !guest.attending };
@@ -171,7 +171,6 @@ export default function App() {
             }}
           />
           <button
-            type="submit"
             disabled={isLoading}
             style={{
               padding: '10px 20px',
