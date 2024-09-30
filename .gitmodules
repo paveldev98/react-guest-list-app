@@ -1,0 +1,4 @@
+[submodule "express-guest-list-api-memory-data-store"]
+    path = express-guest-list-api-memory-data-store
+    url = https://githubbox.com/upleveled/express-guest-list-api-memory-data-store
+
