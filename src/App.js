@@ -7,7 +7,7 @@ export default function App() {
   const [guests, setGuests] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const baseUrl = 'http://h9mzzn-4000.csb.app/guests/';
+  const baseUrl = 'https://9rbjs-4000.csb.app/guests/';
 
   // GET METHOD
   useEffect(() => {
