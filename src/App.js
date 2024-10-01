@@ -13,7 +13,7 @@ export default function App() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch(`${baseUrl}/guests`);
+        const response = await fetch(baseUrl);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -39,7 +39,7 @@ export default function App() {
     event.preventDefault();
 
     try {
-      const response = await fetch(`${baseUrl}/guests`, {
+      const response = await fetch(baseUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ firstName: firstName, lastName: lastName }),
@@ -69,7 +69,7 @@ export default function App() {
         // SEND PUT REQUEST TO UPDATE THE GUEST ON THE SERVER
         const updateGuestOnServer = async () => {
           try {
-            const response = await fetch(`${baseUrl}/guests/${id}`, {
+            const response = await fetch(`${baseUrl}${id}`, {
               method: 'PUT',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ attending: updatedGuest.attending }),
@@ -98,7 +98,7 @@ export default function App() {
   // HANDLE GUEST DELETION / DELETE REQUEST
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`${baseUrl}/guests/${id}`, {
+      const response = await fetch(`${baseUrl}${id}`, {
         method: 'DELETE',
       });
 
